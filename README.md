@@ -1,1 +1,1 @@
-# Cosc490
+# Cosc490 Network code
