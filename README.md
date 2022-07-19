@@ -1,1 +1,2 @@
-# Cosc490 Network code
+# Cosc490
+EEG Network's code
