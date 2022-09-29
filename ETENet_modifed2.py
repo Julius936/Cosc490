@@ -3,6 +3,8 @@ Dose, H., Møller, J. S., Iversen, H. K., & Puthusserypady, S. (2018). An end-to
  classification for BCIs. Expert Systems with Applications, 114, 532–542. https://doi.org/10.1016/j.eswa.2018.08.031
 """
 
+#Addition of the depthwise convolutional layer and the separable convolutional layer to the original ETENet
+
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Flatten
 from tensorflow.keras.layers import Conv2D, AveragePooling2D
