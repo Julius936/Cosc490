@@ -1,2 +1,2 @@
 # Cosc490
-EEG Network's code
+Network's analysed and datasets used
