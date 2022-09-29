@@ -24,12 +24,8 @@ category_2 = "/home/hzy/synthdata/raw"
 
 
 csv_file_path = "/home/julius/Transformer/csv_files/"
-#category_1 = "/home/hzy/synthdata/weaker/class19121701"
-#category_1 = "/home/hzy/synthdata/ica/class19051701"
-#category_2 = "/home/hzy/synthdata/raw"
 num_channels = 19
 num_samples = 511
-
 
 prepare_data(category_1, category_2)
 
@@ -83,10 +79,10 @@ class TransformerBlock(layers.Layer):
 class TokenAndPositionEmbedding(layers.Layer):
     def __init__(self, maxlen, embed_dim):
         super(TokenAndPositionEmbedding, self).__init__()
-        self.pos_emb = layers.Embedding(input_dim=maxlen, output_dim=embed_dim) #Turns positive integers (indexes) into dense vectors of fixed size. The mebedding matrix is a lookup table with 19 rows and 511 columns (19,511)
+        self.pos_emb = layers.Embedding(input_dim=maxlen, output_dim=embed_dim)
 
     def call(self, x):
-        positions = tf.range(start=0, limit=maxlen, delta=1)  #Creates a sequence of numbers that begins at start and extends by increments of delta up to but not including limit.
+        positions = tf.range(start=0, limit=maxlen, delta=1) 
         positions = self.pos_emb(positions)
         x = tf.reshape(x, [-1, maxlen, embed_dim])
         out = x + positions
@@ -126,7 +122,7 @@ history = model.fit(
     train_data, train_labels, batch_size=128, epochs=1000, validation_data=(validation_data, validation_labels), callbacks=[early_stopping]
 )
 
-model.save('MyModel_tf',save_format='tf')
+#model.save('MyModel_tf',save_format='tf')
 
 test_evalauation = model.evaluate(test_data, test_labels, verbose=1)
 
