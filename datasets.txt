@@ -1,6 +1,6 @@
 Datasets used in the experiments. The numbers of each dataset represent:
 the component number where the sine wave is inserted, frequency of inserted sine wave, amplitude of inserted sine wave.
-For example in experiment 1 (001001): the sine wave was inserted into component 0, with a frequency of 10 and amplitude of 1.
+For example in experiment 1 (001001): the sine wave was inserted into component 0 (00), with a frequency of 10 and amplitude of 1 (01).
 
 Exp1:  001001
 Exp2:  111101
@@ -46,8 +46,8 @@ Exp41: 121705
 Exp42: 151705
 Exp43: 001805
 Exp44: 002005
-Exp45: 02505
-Exp46: 00506
+Exp45: 002505
+Exp46: 000506
 Exp47: 181506
 Exp48: 002506
 Exp49: 101710
